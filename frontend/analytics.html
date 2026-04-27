@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NetSpectra | Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="analytics-page"> <nav class="navbar">
+        <h2 class="nav-logo">NetSpectra</h2>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Traffic Analytics</h2>
+        <div class="charts-grid">
+            <div class="card">
+                <h3>Bandwidth Load (KB/s)</h3>
+                <div class="chart-container"><canvas id="throughputChart"></canvas></div>
+            </div>
+            <div class="card">
+                <h3>Data Volume by Protocol (MB)</h3>
+                <div class="chart-container"><canvas id="protocolChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/charts.js"></script>
+</body>
+</html>

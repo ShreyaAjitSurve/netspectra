@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NetSpectra | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2 class="nav-logo">NetSpectra</h2>
+    <ul class="nav-links">
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="interfaces.html">Interfaces</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <div class="kpi-grid">
+        <div class="card">
+            <h3>Total Downloaded</h3>
+            <p id="totalDownload" class="stat-value">0 GB</p>
+        </div>
+        <div class="card">
+            <h3>Download Speed</h3>
+            <p id="downloadSpeed" class="stat-value">0 KB/s</p>
+        </div>
+        <div class="card">
+            <h3>Upload Speed</h3>
+            <p id="uploadSpeed" class="stat-value">0 KB/s</p>
+        </div>
+    </div>
+
+    <div class="charts-grid">
+        <div class="card">
+            <div class="card-header">
+                <h3>Network Throughput</h3>
+                <span id="tcp-stat" class="percentage-pill">0% TCP</span>
+            </div>
+            <div class="chart-container">
+                <canvas id="throughputChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Protocol Distribution</h3>
+            <div class="chart-container">
+                <canvas id="protocolChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Live Packet Feed</h3>
+        <div class="table-wrapper">
+            <table id="packet-feed">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Protocol</th>
+                        <th>Size</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card top-talkers">
+        <h3>Top Talkers</h3>
+        <table id="talkers">
+            <thead>
+                <tr>
+                    <th>Source IP</th>
+                    <th>Activity</th>
+                    <th>Total Traffic</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="js/socket.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
